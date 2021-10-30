@@ -5,6 +5,8 @@
   Firebase
 </div>
 
+<br />
+
 <div *ngIf="!(authService.user | async)">
   <form>
     <fieldset>
@@ -32,7 +34,7 @@
   <button (click)="logout()">Sair</button>
   <hr />
   <div>
-    <a [routerLink]="['/index']">Início</a> |
+    <a [routerLink]="['/']">Início</a> |
     <a [routerLink]="['firelist']">Lista do Firebase</a>
   </div>
   <hr />

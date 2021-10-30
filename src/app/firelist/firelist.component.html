@@ -16,13 +16,15 @@
   <tr>
     <th>Nome</th>
     <th>Idade</th>
+    <th>Email</th>
     <th>Comando</th>
   </tr>
   <tr *ngFor="let item of list | async">
     <td [title]="['chave: ' + item.key]">{{ item.nome }}</td>
-    <td [title]="['chave: ' + item.key]">{{ item.idade }}</td>
+    <td>{{ item.idade }}</td>
+    <td>{{ item.email }}</td>
     <td>
-      <button (click)="deleteItem(item.key)">Remover</button>
+      <button (click)="deleteItem(item.key)" style="color: red">Remover</button>
     </td>
   </tr>
 </table>

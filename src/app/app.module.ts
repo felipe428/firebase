@@ -28,7 +28,7 @@ import { AuthService } from './auth.service';
     }), //falta "databaseURL"
     AngularFireAuthModule,
     RouterModule.forRoot([
-      { path: 'index', component: IndexComponent },
+      { path: '', component: IndexComponent },
       { path: 'firelist', component: FirelistComponent },
     ]),
   ],
