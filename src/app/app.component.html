@@ -5,15 +5,6 @@
   Firebase
 </div>
 
-<ul>
-  <li><b>Nome: </b> Felipe Santos da Silva</li>
-  <li><b>RA: </b> 0050831921034</li>
-  <li>
-    <b>Github: </b>
-    <a href="https://github.com/felipe428">github.com/felipe428</a>
-  </li>
-</ul>
-
 <div *ngIf="!(authService.user | async)">
   <form>
     <fieldset>
@@ -41,7 +32,7 @@
   <button (click)="logout()">Sair</button>
   <hr />
   <div>
-    <a [routerLink]="['']">Início</a> |
+    <a [routerLink]="['/index']">Início</a> |
     <a [routerLink]="['firelist']">Lista do Firebase</a>
   </div>
   <hr />

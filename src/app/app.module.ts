@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 
 import { FirelistComponent } from './firelist/firelist.component';
+import { IndexComponent } from './index/index.component';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
@@ -26,9 +27,17 @@ import { AuthService } from './auth.service';
       appId: '1:344839723408:web:4db97d07a7f80653e47b15',
     }), //falta "databaseURL"
     AngularFireAuthModule,
-    RouterModule.forRoot([{ path: 'firelist', component: FirelistComponent }]),
+    RouterModule.forRoot([
+      { path: 'index', component: IndexComponent },
+      { path: 'firelist', component: FirelistComponent },
+    ]),
   ],
-  declarations: [AppComponent, HelloComponent, FirelistComponent],
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    FirelistComponent,
+    IndexComponent,
+  ],
   bootstrap: [AppComponent],
   providers: [AuthService],
 })
