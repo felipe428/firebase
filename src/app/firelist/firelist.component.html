@@ -12,12 +12,11 @@
 <button (click)="addItem()">Adicionar</button>
 <hr />
 
-<table border="1">
+<table>
   <tr>
     <th>Nome</th>
     <th>Idade</th>
     <th>Email</th>
-    <th>Comando</th>
   </tr>
   <tr *ngFor="let item of list | async">
     <td [title]="['chave: ' + item.key]">{{ item.nome }}</td>

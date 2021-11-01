@@ -10,6 +10,7 @@ import { IndexComponent } from './index/index.component';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { RouterModule } from '@angular/router';
 
 import { AuthService } from './auth.service';
@@ -18,6 +19,10 @@ import { AuthService } from './auth.service';
   imports: [
     BrowserModule,
     FormsModule,
+    RouterModule.forRoot([
+      { path: '', component: IndexComponent },
+      { path: 'firelist', component: FirelistComponent },
+    ]),
     AngularFireModule.initializeApp({
       apiKey: 'AIzaSyBnnN_zwM2UdyeqCqBeUbCNaL8rOmpQmV0',
       authDomain: 'felipesantossilva-f979e.firebaseapp.com',
@@ -27,10 +32,7 @@ import { AuthService } from './auth.service';
       appId: '1:344839723408:web:4db97d07a7f80653e47b15',
     }), //falta "databaseURL"
     AngularFireAuthModule,
-    RouterModule.forRoot([
-      { path: '', component: IndexComponent },
-      { path: 'firelist', component: FirelistComponent },
-    ]),
+    AngularFireDatabaseModule,
   ],
   declarations: [
     AppComponent,
